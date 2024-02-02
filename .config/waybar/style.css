@@ -4,14 +4,21 @@
   font-size: 14px;
   color: #c0caf5;
 }
-
+/*
+[id^="#"] {
+  background: rgba(21, 22, 30, 0.7);
+  padding: 0px 10px;
+  margin: 3px 0px;
+  border: 0px;
+}
+*/
 /* Set background colour of main waybar window */
 window#waybar {
-  background: rgba(21, 22, 30, 0.5);
+  background-color: rgba(0,0,0,0); /* rgba(21, 22, 30, 0.5); */
 }
 
 /* Set background colour of tooltips */
-tooltip {
+#tooltip {
   background: #1e1e2e;
 }
 
@@ -48,26 +55,29 @@ tooltip {
 #workspaces,
 #clock,
 #window,
+#custom-gpu-usage,
 #temperature,
 #cpu,
+#network,
 #memory,
 #pulseaudio,
 #tray,
-#mpd {
-  background: rgba(21, 22, 30, 0.7);
+#custom-media {
+  background: rgba(35, 25, 59, 0.65);/* rgba(21, 22, 30, 0.7);*/
   padding: 0px 10px;
   margin: 3px 0px;
   border: 0px;
+  color: #ffffff;
 }
 
 /* set up rounding to make these modules look like seperate pills */
-#mpd {
+#custom-media {
   border-radius: 8px 8px 8px 8px;
   margin-left: 4px;
 }
 #tray {
-  border-radius: 8px 8px 8px 8px;
-  margin-right: 4px;
+  border-radius: 16px 16px 16px 16px;
+  margin-right: 16px;
 }
 #window {
   border-radius: 8px 8px 8px 8px;

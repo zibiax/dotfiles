@@ -1,5 +1,5 @@
 <h1 align="center">.dots</h1>
-<h4 align="center">by fxzzi.</h4>
+<h4 align="center">by zibiax</h4>
 <h4 align="center">based on the tokyonight color scheme.</h4>
 
 <img src="assets/preview.png" alt="Rice Showcase" align="right" width="450">
@@ -17,7 +17,7 @@
 ## ✔️ Installation
 
 ```
-$ git clone https://gitlab.com/fazzi/dotfiles.git && cd dotfiles && ./install
+$ git clone https://github.com/zibiax/dotfiles.git && cd dotfiles && ./install
 ```
 
 This will create symlinks and overwrite files. It will also install all packages from needed.list. Please backup your current configs before installing!
@@ -26,4 +26,4 @@ You will then have to enter files containing configs specific to my setup and ed
 
 ## 🖥️ Wallpapers
 
-[Wallpaper Folder](https://gitlab.com/fazzi/dotfiles/-/tree/main/walls "walls folder")
+[Wallpaper Folder](https://github.com/zibiax/dotfiles/-/tree/main/walls "walls folder")

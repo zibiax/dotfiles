@@ -5,11 +5,11 @@
   "height": 36, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   // "spacing": 4, // Gaps between modules (4px)
-  "output": "DP-1",
+  "output": "HDMI-A-1",
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces", "clock", "custom/kernel", "mpd"],
+  "modules-left": ["hyprland/workspaces", "clock", "custom/pacman", "custom/media"],
   "modules-center": ["hyprland/window"],
-  "modules-right": [ "tray", "temperature", "cpu", "memory","network", "pulseaudio"],
+  "modules-right": ["tray", "custom/gpu-usage", "temperature", "cpu", "memory", "pulseaudio"],
 
   // Modules configuration
 
@@ -28,6 +28,19 @@
     "interval": 3
   },
 
+  "custom/media": {
+    "format": "<span color=\"#7aa2f7\">{stateIcon} </span>{artist} - {title}",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+},
+
   "temperature": {
     // "thermal-zone": 2,
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
@@ -37,6 +50,13 @@
     "interval": 3
   },
 
+  "custom/gpu-usage": {
+  "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+  "format": "<span color=\"#7aa2f7\"> </span>GPU {}%", 
+  "return-type": "",
+  "interval": 3
+},
+
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
@@ -44,7 +64,6 @@
     "format-icons": ["", "", ""],
     "on-click": "pavucontrol"
   },
-
   "hyprland/window": {
     "max-length": 48,
     "format": "{}"
@@ -57,7 +76,7 @@
   },
 
   "custom/pacman": {
-    "exec": "$XDG_CONFIG_HOME/waybar/scripts/package-updates.sh",
+    "exec": "$HOME/.config/waybar/scripts/package-updates.sh",
     "format": "<span color=\"#7aa2f7\"> </span>{}",
     "interval": 600,
     "signal": 1
@@ -69,7 +88,7 @@
   },
   "tray": {
     "icon-size": 18,
-    "spacing": 8,
+    "spacing": 8
   },
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -100,21 +119,5 @@
     },
     "tooltip-format": "MPD (connected)",
     "tooltip-format-disconnected": "MPD (disconnected)"
-  },
-  "network": {
-    "icon-size": 8,
-    "interval": 10,
-    "spacing": 8,
-	"interface": "enp39s0",
-	"format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
-	"format-ethernet": "{ifname} ",
-	"format-disconnected": "", //An empty format will hide the module.
-	"format-disconnected": "",
-	"tooltip-format": "{ifname}",
-	"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-	"tooltip-format-ethernet": "{ifname} ",
-	"tooltip-format-disconnected": "Disconnected",
-	"max-length": 50
   }
 }
