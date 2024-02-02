@@ -1,0 +1,43 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+      quiet: true
+
+- clean: ["~", "~/.config"]
+
+- link:
+    ~/.config/hypr: .config/hypr
+    ~/.config/bottom: .config/bottom
+    ~/.config/waybar: .config/waybar
+    ~/.config/dunst: .config/dunst
+    ~/.config/kitty: .config/kitty
+    ~/.config/rofi: .config/rofi
+    ~/.config/Thunar: .config/Thunar
+    ~/.config/zsh: .config/zsh
+    ~/.config/paru: .config/paru
+    ~/.config/ncmpcpp: .config/ncmpcpp
+    ~/.config/mpd: .config/mpd
+    ~/.config/macchina: .config/macchina
+    ~/.config/nvim: .config/nvim
+    ~/.config/qt6ct: .config/qt6ct
+    ~/.config/pacman: .config/pacman
+    ~/.local/scripts: .local/scripts
+    ~/.local/share/fonts: .local/share/fonts
+    ~/.local/share/rofi: .local/share/rofi
+    ~/.local/share/icons/default: .local/share/icons/default
+    ~/Pictures/Wallpapers: Wallpapers
+    ~/.zshenv: .zshenv
+
+- create:
+    - ~/.local/state/zsh
+
+- shell:
+    - [assets/bootstrap/paru.sh, Installing paru]
+    - [assets/bootstrap/packages.sh, Installing packages]
+    - [assets/bootstrap/zgenom.sh, Installing zgenom]
+    - [chsh -s $(which zsh), Making zsh the default shell]
