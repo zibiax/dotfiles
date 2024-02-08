@@ -26,4 +26,4 @@ You will then have to enter files containing configs specific to my setup and ed
 
 ## 🖥️ Wallpapers
 
-[Wallpaper Folder](https://github.com/zibiax/dotfiles/-/tree/main/walls "walls folder")
+[Wallpaper Folder](https://github.com/zibiax/dotfiles/Wallpapers "walls folder")
