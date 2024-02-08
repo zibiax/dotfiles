@@ -4,7 +4,7 @@
 
 <img src="assets/preview.png" alt="Rice Showcase" align="right" width="450">
 
-- **Operating System:** [arch](https://archlinux.org/)
+- **Operating System:** [EndeavourOS](https://endeavouros.com/)
 - **Compositor:** [Hyprland](https://github.com/hyprwm/Hyprland)
 - **Terminal Emulator:** [Kitty](https://github.com/kovidgoyal/kitty)
 - **Status Bar:** [waybar](https://github.com/Alexays/Waybar/)
