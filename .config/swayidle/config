@@ -1,0 +1,6 @@
+# swayidle configuration file
+
+# Monitor for activity and execute commands accordingly
+# After 60 seconds of inactivity, turn off the screens and lock
+timeout 500 'hyprctl dispatch dpms off && swaylock' resume 'hyprctl dispatch dpms on && pkill swaylock'
+# When activity is detected, turn on the screens and kill swaylock
