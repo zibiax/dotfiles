@@ -1,4 +1,4 @@
-<h1 align="center">.dots</h1>
+<h1 align="center">.dotfiles</h1>
 <h4 align="center">by zibiax</h4>
 <h4 align="center">based on the tokyonight color scheme.</h4>
 
