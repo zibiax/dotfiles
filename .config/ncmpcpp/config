@@ -1,4 +1,4 @@
-mpd_music_dir = "$HOME/Music/"
+mpd_music_dir = "~/Music/"
 lyrics_directory = ~/.local/share/ncmpcpp/lyrics
 #mpd_host = "127.0.0.1"
 #mpd_port = "6601"
@@ -58,3 +58,4 @@ startup_screen = playlist
 startup_slave_screen = "visualizer"
 startup_slave_screen_focus = no
 locked_screen_width_part = 55
+
