@@ -45,7 +45,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  background: #11111b;
+  background: #ed2b2b;
   color: #cdd6f4;
 }
 
@@ -63,7 +63,7 @@ window#waybar {
 #pulseaudio,
 #tray,
 #custom-media {
-  background: rgba(35, 25, 59, 0.65);/* rgba(21, 22, 30, 0.7);*/
+  background: #160654;
   padding: 0px 10px;
   margin: 3px 0px;
   border: 0px;
