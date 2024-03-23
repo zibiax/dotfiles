@@ -31,3 +31,5 @@ alias vim='nvim' # Editor
 alias c='clear' # clear
 alias upgrade='yay && sudo pacman -Syuu && paru' # update script
 alias restart-plex='sudo systemctl restart plexmediaserver'
+alias tmux-save='/home/martin/bin/tmux-script.sh save' # save state of tmux
+alias tmux-restore='/home/martin/bin/tmux-script.sh restore' # save state of tmux

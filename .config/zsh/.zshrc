@@ -2,6 +2,7 @@
 
 export ZDOTDIR="$HOME/.config/zsh"
 
+# export PATH="/opt/miniconda3/bin:$PATH"  # commented out by conda initialize
 # Source ZSH configs
 source ${ZDOTDIR}/options.zsh # Source zsh options
 source ${ZDOTDIR}/compinit.zsh # Source completion conf
@@ -10,7 +11,7 @@ source ${ZDOTDIR}/keybinds.zsh # Source zsh keybinds
 source ${ZDOTDIR}/functions.zsh # Source custom functions
 source ${ZDOTDIR}/zgenom.zsh # Source zgenom for plugins
 source ${ZDOTDIR}/keybinds-late.zsh # Source late load keybinds
-
+#source ${ZDOTDIR}/conda.zsh # Conda script
 # Function to get the current Git branch with color
 git_branch() {
     local branch_name
@@ -24,19 +25,7 @@ git_branch() {
 # Customize your Zsh prompt
 PROMPT='%F{blue}%n%: %~ $(git_branch)%F{reset}% '
 
-# Check if Miniconda is installed
-if [[ -d "/opt/miniconda3" ]]; then
-    # Add Miniconda to PATH
-    export PATH="/opt/miniconda3/bin:$PATH"
-    export CONDA_EXE="/opt/miniconda3/bin/conda"
 
-    # Activate conda base environment
-    . "/opt/miniconda3/etc/profile.d/conda.sh"
-    conda activate base
-fi
-
-# Add system Python to PATH
-export PATH="/bin:$PATH"
 
 # PROMPT='%F{yellow}%3~%f $ '
 # Run fetch script on zsh start
@@ -50,16 +39,20 @@ macchina --theme fazzi
 
 #export QT_QPA_PLATFORM=wayland
 
-#__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/opt/miniconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/opt/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
