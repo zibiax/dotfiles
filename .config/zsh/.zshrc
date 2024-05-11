@@ -26,6 +26,17 @@ git_branch() {
 PROMPT='%F{blue}%n%: %~ $(git_branch)%F{reset}% '
 
 
+fd() {
+    local dir
+    dir=$(find . -type d 2>/dev/null | fzf +m) && cd "$dir" || return
+}
+
+
+ff() {
+    local file
+    file=$(find . -type f 2>/dev/null | fzf +m) && cd "$(dirname "$file")" || return
+}
+
 
 # PROMPT='%F{yellow}%3~%f $ '
 # Run fetch script on zsh start

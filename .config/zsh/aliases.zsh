@@ -5,6 +5,8 @@ alias mv='mv -v'    # Verbose `mv`
 alias mkdir='mkdir -vp'  # Recursive, verbose `mkdir`
 alias grep='rg'     # Use `ripgrep` instead of `grep`
 alias cat='bat'     # Use `bat` instead of `cat`
+alias c='clear' # clear
+alias q='exit' # exit
 
 # `exa` aliases for more informative and colored output
 alias la='exa --icons -a --group-directories-first'  # List all files and directories, including hidden ones
@@ -28,7 +30,7 @@ alias gp='git push'
 alias updates='checkupdates; paru -Qum'  # Check system and AUR updates
 alias rs='curl --data-binary @- https://paste.rs | wl-copy'  # Share output to a pastebin and copy to clipboard
 alias vim='nvim' # Editor
-alias c='clear' # clear
+alias n='nvim .' # Start nvim in directory
 alias upgrade='yay && sudo pacman -Syuu && paru' # update script
 alias restart-plex='sudo systemctl restart plexmediaserver'
 alias tmux-save='/home/martin/bin/tmux-script.sh save' # save state of tmux
