@@ -68,3 +68,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+export PATH=$PATH:$HOME/go/bin
