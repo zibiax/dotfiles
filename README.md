@@ -6,13 +6,13 @@
 
 - **Operating System:** [EndeavourOS](https://endeavouros.com/)
 - **Compositor:** [Hyprland](https://github.com/hyprwm/Hyprland)
-- **Terminal Emulator:** [Kitty](https://github.com/kovidgoyal/kitty)
+- **Terminal Emulator:** [Alacritty](https://github.com/alacritty/alacritty)
 - **Status Bar:** [waybar](https://github.com/Alexays/Waybar/)
 - **App Launcher:** [rofi](https://github.com/lbonn/rofi)
 - **Notification Daemon:** [dunst](https://github.com/dunst-project/dunst)
 - **Shell:** [zsh](https://www.zsh.org/)
 - **Shell Plugin Manager:** [zgenom](https://github.com/jandamm/zgenom)
-- **Browser:** [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
+- **Browser:** [Chromium](https://chromium.org/)
 
 ## ✔️ Installation
 
