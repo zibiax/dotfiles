@@ -7,7 +7,7 @@
   // "spacing": 4, // Gaps between modules (4px)
   "output": "DP-1",
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces", "clock", "custom/kernel", "mpd"],
+  "modules-left": ["hyprland/workspaces", "clock", "custom/kernel", "custom/pacman","mpd"],
   "modules-center": ["hyprland/window"],
   "modules-right": [ "tray", "temperature", "cpu", "memory","network", "pulseaudio"],
 
@@ -23,6 +23,7 @@
     "tooltip": false,
     "interval": 3
   },
+  
   "memory": {
     "format": "<span color=\"#7aa2f7\"> </span>{used}GiB",
     "interval": 3
@@ -58,6 +59,13 @@
 
   "custom/pacman": {
     "exec": "$XDG_CONFIG_HOME/waybar/scripts/package-updates.sh",
+    "format": "<span color=\"#7aa2f7\"> </span>{}",
+    "interval": 600,
+    "signal": 1
+  },
+  
+  "custom/pacman": {
+    "exec": "$HOME/.config/waybar/scripts/package-updates.sh",
     "format": "<span color=\"#7aa2f7\"> </span>{}",
     "interval": 600,
     "signal": 1
